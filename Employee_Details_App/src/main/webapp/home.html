@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<h1>Here Both Admin and User get all the Access.</h1>
+    <div class="navbar">
+        <c:choose>
+            <c:when test="${sessionScope.role == 'admin'}">
+                <a href="employee.html">Add Employee</a>
+                <a href="view">View Employees</a>
+                <a href="adminTasks.html">Admin Tasks</a>
+            </c:when>
+            <c:when test="${sessionScope.role == 'user'}">
+                <a href="employee.html">Add Employee</a>
+                <a href="view">View Employees</a>
+            </c:when>
+            <c:otherwise>
+                <a href="login.html">Back To Login</a>
+            </c:otherwise>
+        </c:choose>
+    </div>
+</body>
+</html>
