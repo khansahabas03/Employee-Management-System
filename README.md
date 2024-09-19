@@ -22,13 +22,12 @@ Oracle: Set up Oracle or another database compatible with JDBC.
 ## Steps to Run
 Clone the Repository:
 
-git clone https://github.com/your-username/Employee_Details_App.git
+git clone https://github.com/khansahabas03/Employee-Management-System.git
 Database Setup:
 
-Create a MySQL database named employee_db.
+Create a Oracle database named employee_db.
 Run the following SQL script to create the Employee61 table:
 sql
-Copy code
 CREATE TABLE Employee61 (
     ID VARCHAR(10) PRIMARY KEY,
     eName VARCHAR(50),
@@ -45,20 +44,14 @@ Deploy to Tomcat:
 
 Copy the Employee_Details_App project to the webapps folder of your Tomcat installation.
 Start the Tomcat server using the command:
-bash
-Copy code
-./catalina.sh start (Linux/macOS)
+
 catalina.bat start (Windows)
 Access the Application:
 
 Open a web browser and go to:
-bash
-Copy code
+
 http://localhost:8080/Employee_Details_App/login.jsp
-Login Credentials:
+## Login Credentials:
 
 Username: admin
 Password: admin123
-Additional Notes
-Ensure your Tomcat server is running and correctly deployed.
-The default login is for an admin to add, view, or remove employee details.
